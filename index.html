@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="style.css">
 <body>
     
     <div id="container">
         <h1>Password Generator</h1>
-        <div>
+        
+            <div class="passwordBox">
             <input type="text" id="password">
-            
+
             <button id="reloadBtn">🔄</button>
             <button id="copybtn">Copy</button>
+        </div>
 
             <p>Password Strength: <span id="strength">Weak</span></p>
-        </div>
+
         
         <br><br>
 
         <p>Password Length: <span id="lengthValue">16</span></p>
-        <button id="minusbtn">-</button>
-        <input type="range" id="length" min="1" max="32" value="16">
-        <button id="plusbtn">+</button>
-
-        
+        <div class="rangeBox">
+            <button id="minusbtn">-</button>
+            <input type="range" id="length" min="1" max="32" value="16">
+            <button id="plusbtn">+</button>
+        </div>
 
         <br><br>
         <label >

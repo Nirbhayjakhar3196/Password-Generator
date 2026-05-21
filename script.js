@@ -58,6 +58,12 @@ function generatePassword(){
 
     passwordDisplay.value = generatePassword
 
+    passwordDisplay.classList.add("animate")
+
+    setTimeout(() => {
+        passwordDisplay.classList.remove("animate")
+    },300)
+
     if(passwordLength.value >= 12){
         strengthCheck += 1
     }
