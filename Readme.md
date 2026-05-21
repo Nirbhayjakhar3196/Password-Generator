@@ -79,13 +79,8 @@ password-generator/
 
 ## 🌐 Live Demo
 
-👉 Add your deployed link here
+👉 https://password-generator-psi-lilac.vercel.app/
 
-```bash
-https://your-live-link.vercel.app
-```
-
----
 
 ## 📚 Learning Outcome
 
