@@ -13,9 +13,11 @@ const uppercase = document.getElementById("uppercase");
 const lowercase = document.getElementById("lowercase");
 const numbersCheckbox = document.getElementById("numbers");
 const symbolsCheckbox = document.getElementById("symbol");
-const generateBtn = document.getElementById('addbtn')
+const reloadBtn = document.getElementById('reloadBtn')
 const copy = document.getElementById('copybtn')
 const lengthValue = document.getElementById('lengthValue')
+const minusbtn = document.getElementById('minusbtn')
+const plusbtn = document.getElementById('plusbtn')
 
 function generatePassword(){
     let allowedChars = ""
@@ -51,7 +53,7 @@ function generatePassword(){
 }
 
 
-generateBtn.addEventListener('click' , () => {
+reloadBtn.addEventListener('click' , () => {
 
         generatePassword()
 })
@@ -72,6 +74,29 @@ copy.addEventListener('click' , () => {
 
 passwordLength.addEventListener('input',() => {
     lengthValue.textContent = passwordLength.value
+})
+
+plusbtn.addEventListener('click',()=> {
+
+    if(passwordLength.value < 32){
+        passwordLength.value = Number(passwordLength.value) + 1
+
+        lengthValue.textContent = passwordLength.value
+
+        generatePassword()
+    }
+    
+})
+minusbtn.addEventListener('click',()=> {
+
+    if(passwordLength.value >4){
+        passwordLength.value = Number(passwordLength.value) - 1
+
+        lengthValue.textContent = passwordLength.value
+
+        generatePassword()
+    }
+    
 })
 
 uppercase.checked = true;
