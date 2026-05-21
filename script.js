@@ -61,11 +61,17 @@ copy.addEventListener('click' , () => {
         alert('Generate password')
         return
     }
-    const copied = navigator.clipboard.writeText(passwordDisplay.value);
+    navigator.clipboard.writeText(passwordDisplay.value);
     
-    alert("password Copied")
+    copy.textContent = "Copied!"
+
+    setTimeout(() => {
+        copy.textContent = "Copy"
+    },2000)
 })
 
-
+passwordLength.addEventListener('input',() => {
+    lengthValue.textContent = passwordLength.value
+})
 
 

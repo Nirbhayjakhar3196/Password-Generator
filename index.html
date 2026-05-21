@@ -7,11 +7,16 @@
 </head>
 <body>
     
-    <div>
+    <div id="container">
         <h1>Password Generator</h1>
-        <input type="text" id="password" placeholder="Enter your password">
+        <div>
+            <input type="text" id="password">
+            <button id="copybtn">Copy</button>
+        </div>
+        
         <br><br>
-        <p>Password Length: <span id="lengthValue">8</span></p>
+        <p>Password Length: <span id="lengthValue">16</span></p>
+        <input type="range" id="length" min="1" max="32" value="16">
 
         <br><br>
         <label >
@@ -30,7 +35,7 @@
         <br><br>
         
         <button id="addbtn">Generate</button><br><br>
-        <button id="copybtn">Copy</button>
+        
 
     </div>
 
