@@ -27,10 +27,10 @@ This project generates secure random passwords with customizable options like up
 - JavaScript (DOM Manipulation)
 
 ---
-
+<!-- 
 ## 📸 Preview
 
-![alt text](image.png)<img width="800" alt="Password Generator Preview" src="https://via.placeholder.com/800x400.png?text=Password+Generator+App">
+![alt text](image.png)<img width="800" alt="Password Generator Preview" src="https://via.placeholder.com/800x400.png?text=Password+Generator+App"> -->
 
 ---
 
