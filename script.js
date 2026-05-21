@@ -17,11 +17,7 @@ const generateBtn = document.getElementById('addbtn')
 const copy = document.getElementById('copybtn')
 const lengthValue = document.getElementById('lengthValue')
 
-
-
-
-generateBtn.addEventListener('click' , () => {
-
+function generatePassword(){
     let allowedChars = ""
 
     if(uppercase.checked){
@@ -52,8 +48,12 @@ generateBtn.addEventListener('click' , () => {
 
 
     passwordDisplay.value = generatePassword
+}
 
 
+generateBtn.addEventListener('click' , () => {
+
+        generatePassword()
 })
 
 copy.addEventListener('click' , () => {
@@ -74,4 +74,10 @@ passwordLength.addEventListener('input',() => {
     lengthValue.textContent = passwordLength.value
 })
 
+uppercase.checked = true;
+lowercase.checked = true;
+numbersCheckbox.checked = true;
+symbolsCheckbox.checked = true;
 
+
+generatePassword()
