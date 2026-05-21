@@ -15,6 +15,7 @@ const numbersCheckbox = document.getElementById("numbers");
 const symbolsCheckbox = document.getElementById("symbol");
 const generateBtn = document.getElementById('addbtn')
 const copy = document.getElementById('copybtn')
+const lengthValue = document.getElementById('lengthValue')
 
 
 
@@ -36,15 +37,35 @@ generateBtn.addEventListener('click' , () => {
         allowedChars += symbols;
     } 
 
-    const randomIndex= Math.floor(Math.random()*allowedChars.length)
-
     let generatePassword = ""
 
-    passwordDisplay.value
-    
-    
+    if(allowedChars === ""){
+        alert('Plz select atleast one checkbox')
+        return
+    }
+
+    for(let i =0 ;i<passwordLength.value;i++){
+        const randomIndex= Math.floor(Math.random()*allowedChars.length)
+
+        generatePassword += allowedChars[randomIndex]
+    }
+
+
+    passwordDisplay.value = generatePassword
+
 
 })
+
+copy.addEventListener('click' , () => {
+    if(passwordDisplay.value === ""){
+        alert('Generate password')
+        return
+    }
+    const copied = navigator.clipboard.writeText(passwordDisplay.value);
+    
+    alert("password Copied")
+})
+
 
 
 
